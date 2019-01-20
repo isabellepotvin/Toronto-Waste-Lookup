@@ -56,7 +56,7 @@ $(document).ready(function () {
 
 	// DISPLAY FAVOURITES SECTION (if there are any favourites)
 	function displayFavouritesSection(){
-		if(favourite == null || favourites.length == 0){
+		if(favourites == null || favourites.length == 0){
 			$("#favourites-section").hide();
 		}
 		else{
