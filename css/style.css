@@ -23,11 +23,6 @@ section{
   overflow: auto;
 }
 
-#header-section{
-  padding-bottom: 20px;
-}
-
-
 /* TEXT */
 
 h1{
@@ -85,6 +80,7 @@ h3{
   justify-content: center;
   color: #fff;
   background-image: linear-gradient(90deg, #215A94, #47985E);
+  padding-bottom: 20px;
 }
 
 
@@ -92,6 +88,7 @@ h3{
 
 #search-section {
   display: flex;
+  overflow: visible;
 }
 
 
