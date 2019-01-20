@@ -71,16 +71,16 @@ $(document).ready(function () {
 			$.each(favourites, function name(key, val) {
 
 				output += '<div class="result-item favourited" data-key="' + val + '">';
-        		output += '<div class="title">';
-		        output += '<span><i class="fas fa-star"></i></span>';
-          		output += '<h3>' + data[val].title + '</h3>';
-        		output += '</div>';
+				output += '<div class="title">';
+				output += '<span><i class="fas fa-star"></i></span>';
+				output += '<h3>' + data[val].title + '</h3>';
+				output += '</div>';
 
-        		var html = $('<textarea />').html(data[val].body).text();
-        		output += '<div class="description">';
-          		output += html;
-        		output += '</div>';
-        		output += '</div>';
+				var html = $('<textarea />').html(data[val].body).text();
+				output += '<div class="description">';
+				output += html;
+				output += '</div>';
+				output += '</div>';
 			});
 
 			$('#favourites-section').html(output);
@@ -142,17 +142,18 @@ $(document).ready(function () {
 						val.body.search(myExp) != -1 || 
 						val.category.search(myExp) != -1 || 
 						val.keywords.search(myExp) != -1){
+						
 						output += '<div class="result-item" data-key="' + key + '">';
-		        		output += '<div class="title">';
-		        		output += '<span><i class="fas fa-star"></i></span>';
-		          		output += '<h3>' + val.title + '</h3>';
-		        		output += '</div>';
+						output += '<div class="title">';
+						output += '<span><i class="fas fa-star"></i></span>';
+						output += '<h3>' + val.title + '</h3>';
+						output += '</div>';
 
-		        		var html = $('<textarea />').html(val.body).text();
-		        		output += '<div class="description">';
-		          		output += html;
-		        		output += '</div>';
-		        		output += '</div>';
+						var html = $('<textarea />').html(val.body).text();
+						output += '<div class="description">';
+						output += html;
+						output += '</div>';
+						output += '</div>';
 					}
 				});
 
@@ -160,7 +161,7 @@ $(document).ready(function () {
 					output += '<div class="no-results">';
 					output += 'Sorry, we couldn\'t find any matches for ' + $('#search-input').val();
 					output += '<p>Please try searching with another term</p>';
-	        		output += '</div>';
+	        			output += '</div>';
 				}
 
 				$('#results-section').html(output); //add text to results section
