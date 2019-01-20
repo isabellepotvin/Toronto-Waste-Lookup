@@ -9,8 +9,6 @@ $(document).ready(function () {
  	loadHTML += '<span></span>';
  	loadHTML += '</div>';
   
-
-
 	var favourites = JSON.parse(localStorage.getItem("TWL-favourites"));
 	displayFavouritesSection();
 	
@@ -56,7 +54,10 @@ $(document).ready(function () {
 
 	// DISPLAY FAVOURITES SECTION (if there are any favourites)
 	function displayFavouritesSection(){
-		if(favourites == null || favourites.length == 0){
+		if(favourites == null){
+			favourites = [];
+		}
+		if(favourites.length == 0){
 			$("#favourites-section").hide();
 		}
 		else{
