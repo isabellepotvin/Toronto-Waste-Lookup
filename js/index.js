@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-	// var favs = [1,2,3];
- //   	localStorage.setItem("TWL-favourites", JSON.stringify(favs));
-
  	var loadHTML = '<div class="load">';
  	loadHTML += '<span></span>';
  	loadHTML += '<span></span>';
@@ -18,9 +15,6 @@ $(document).ready(function () {
 		var resultItem = $(this).parents(".result-item");
 		var clickedResultKey = resultItem.attr("data-key");
 		var newFavourite = true;
-
-
-		console.log("clickedResultKey: " + clickedResultKey);
 
 		$.each(favourites, function name(key, val) {
 			if(val == clickedResultKey){
@@ -189,7 +183,6 @@ $(document).ready(function () {
 	setHeightOfFavourites();
 
 	function setHeightOfFavourites(){
-		console.log(parseInt($('.container').css('min-height')));
 		var height = parseInt($('.container').css('min-height'))
 			- $('#header-section').outerHeight() 
 			- $('#search-section').outerHeight() 
