@@ -53,11 +53,12 @@ $(document).ready(function () {
 			favourites = [];
 		}
 		if(favourites.length == 0){
+			$('#favourites-section').empty();
 			$("#favourites-section").hide();
 		}
 		else{
-			$("#favourites-section").show();
 			displayFavouriteItems();
+			$("#favourites-section").show();
 		}
 	}
 
