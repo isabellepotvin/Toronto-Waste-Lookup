@@ -7,6 +7,7 @@ $(document).ready(function () {
  	loadHTML += '</div>';
   
 	var favourites = JSON.parse(localStorage.getItem("TWL-favourites"));
+	$('#favourites-section').html(loadHTML); //display loading animation
 	displayFavouritesSection();
 	
 	// WHEN STAR IS CLICKED
@@ -62,8 +63,6 @@ $(document).ready(function () {
 
 	// LOAD INFORMATION INTO THE FAVOURITES SECTION
 	function displayFavouriteItems(){
-
-		$('#favourites-section').html(loadHTML); //display loading animation
 
 		$.getJSON('https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000', function(data){
 			var output = "";
