@@ -95,8 +95,8 @@ $(document).ready(function () {
 	$('#results-section').html(defaultSearchPromptText);
 
 	// CLEAR SEARCH RESULTS
-	$('#search-input').on("search", function() {
-		console.log("clearing...");
+	$('#search-input').on("change", function() {
+		console.log("changing...");
 		var searchKeyword = $('#search-input').val();
 		if(searchKeyword == ""){
 			$('#results-section').empty();
