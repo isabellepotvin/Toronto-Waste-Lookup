@@ -184,6 +184,7 @@ $(document).ready(function () {
 
 	function setHeightOfFavourites(){
 		var height = parseInt($('.container').css('min-height'))
+			- $('#tab-section').outerHeight() 
 			- $('#header-section').outerHeight() 
 			- $('#search-section').outerHeight() 
 			- $('#results-section').outerHeight()
